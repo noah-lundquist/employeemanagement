@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+	<script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+</head><body>
+    <div class="container text-center" layout:fragment="content">
+        <h3 style="text-align: center; color:deeppink" th:text="${loginMsg}"></h3>
+        <form th:action="@{/login}" method="post">
+        <h3 style="text-align:center">Login</h3>
+<br><input type="text" name="username" id="username" placeholder="Username" required ><br><br>
+
+<input type="password" name="password" id="password" placeholder="Password" required ><br><br>
+				<input type="submit" value="Submit" >
+        </form>
+        
+    </div>
+     
+</body>
+</html>
